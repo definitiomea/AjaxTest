@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <title>Ajax 테스트</title>
+</head>
+<body>
+    <h1>ajax 실험해보기</h1>
+    <input type="button" value="ul과 li를 ajax로 실험합니다" id="requestBtn">
+    <ul id="#list"></ul>
+    <script>
+        /* 서버에 올라가있지 않아서 안되는 것 같다. */
+        $(function() {
+            $("#requestBtn").on("click", function() {
+                $("#list").load("./ajaxli.html li");
+            });
+        });
+    </script>
+</body>
+</html>
